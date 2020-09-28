@@ -23,14 +23,14 @@ public class AppTest
 {
 	Fahrenheit object;
 	
-	@Before
-	
-	
-	public void newClassFahrenheit() {
-		object = new Fahrenheit();
-		
-	}
-	
+//	@Before
+//	
+//	
+//	public void newClassFahrenheit() {
+//		object = new Fahrenheit();
+//		
+//	}
+//	
 	@Test
 	public void testResult0Input0() {
 		
