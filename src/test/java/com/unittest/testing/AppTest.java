@@ -15,71 +15,200 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
+
+import org.junit.Before;
 import org.junit.Test;
 
 public class AppTest 
 {
-	@Test
-	public void pub() {
-		 assertEquals(0 , 1);
+	Fahrenheit object;
+	
+	@Before
+	
+	
+	public void newClassFahrenheit() {
+		object = new Fahrenheit();
+		
 	}
 	
-//	@Test
-//	  public void testAssertArrayEquals() {
-//	    byte[] expected = "trial".getBytes();
-//	    byte[] actual = "trial".getBytes();
-//	    assertArrayEquals("failure - byte arrays not same", expected, actual);
-//	  }
-//
-//	  @Test
-//	  public void testAssertEquals() {
-//	    assertEquals("failure - strings are not equal", "text", "text");
-//	  }
-//
-//	  @Test
-//	  public void testAssertFalse() {
-//	    assertFalse("failure - should be false", false);
-//	  }
-//
-//	  @Test
-//	  public void testAssertNotNull() {
-//	    assertNotNull("should not be null", new Object());
-//	  }
-//
-//	  @Test
-//	  public void testAssertNotSame() {
-//	    assertNotSame("should not be same Object", new Object(), new Object());
-//	  }
-//
-//	  @Test
-//	  public void testAssertNull() {
-//	    assertNull("should be null", null);
-//	  }
-//
-//	  @Test
-//	  public void testAssertSame() {
-//	    Integer aNumber = Integer.valueOf(768);
-//	    assertSame("should be same", aNumber, aNumber);
-//	  }
-//
-//	  // JUnit Matchers assertThat
-//	  @Test
-//	  public void testAssertThatBothContainsString() {
-//	    assertThat("albumen", both(containsString("a")).and(containsString("b")));
-//	  }
-//
-//	  @Test
-//	  public void testAssertThatHasItems() {
-//	    assertThat(Arrays.asList("one", "two", "three"), hasItems("one", "three"));
-//	  }
-//
-//	  @Test
-//	  public void testAssertThatEveryItemContainsString() {
-//	    assertThat(Arrays.asList(new String[] { "fun", "ban", "net" }), everyItem(containsString("n")));
-//	  }
-//
-//	  @Test
-//	  public void testAssertTrue() {
-//	    assertTrue("failure - should be true", true);
-//	  }
+	@Test
+	public void testResult0Input0() {
+		
+		double input = 0 ;
+		double expected = 0;
+		object.input(input);
+		double actual = object.getCelsius();
+		assertEquals(expected, actual,2);
+	}
+	
+	@Test
+	public void testResult1000Input1000() {
+		
+		double input = 1000 ;
+		double expected = 1000;
+		object.input(input);
+		double actual = object.getCelsius();
+		assertEquals(expected, actual,2);
+	}
+	
+	@Test
+	public void testResultminus1000Inputminus1000() {
+		
+		double input = -1000 ;
+		double expected = -1000;
+		object.input(input);
+		double actual = object.getCelsius();
+		assertEquals(expected, actual,2);
+	}
+	
+	@Test
+	public void testResultTrueinput0() {
+		
+		double input = 0 ;
+		boolean expected = true;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testResultTrueinput1000() {
+		
+		double input = 1000 ;
+		boolean expected = true;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testResultTrueinputminus1000() {
+		
+		double input = -1000 ;
+		boolean expected = true;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testResultTrueinput2000() {
+		
+		double input = 2000 ;
+		boolean expected = false;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testResultTrueinputminus2000() {
+		
+		double input = -2000 ;
+		boolean expected = false;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testResultTrueinputminus1010() {
+		
+		double input = -1010 ;
+		boolean expected = false;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultTrueinputminus1001() {
+		
+		double input = -1001 ;
+		boolean expected = false;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultTrueinputminus999() {
+		
+		double input = -999 ;
+		boolean expected = true;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultTrueinputminus501() {
+		
+		double input = -501 ;
+		boolean expected = true;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultTrueinputminus500() {
+		
+		double input = -500 ;
+		boolean expected = true;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultTrueinputminus499() {
+		
+		double input = -499 ;
+		boolean expected = true;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultTrueinputminus1() {
+		
+		double input = -1 ;
+		boolean expected = true;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultTrueinput499() {
+		
+		double input = 499 ;
+		boolean expected = true;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultTrueinput500() {
+		
+		double input = 500 ;
+		boolean expected = true;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultTrueinput501() {
+		
+		double input = 501 ;
+		boolean expected = true;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultTrueinput999() {
+		
+		double input = 999 ;
+		boolean expected = true;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultTrueinput1001() {
+		
+		double input = 1001 ;
+		boolean expected = false;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultTrueinput1010() {
+		
+		double input = 1010 ;
+		boolean expected = false;
+		boolean actual = object.isBound(input);
+		assertEquals(expected, actual);
+	}
+	
 }
