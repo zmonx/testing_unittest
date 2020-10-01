@@ -2,24 +2,51 @@ package com.unittest.testing;
 
 public class Fahrenheit {
 	
-	private double celsius;
+	private double celcius;
+	private double fahrenhiet;
 	
-	public double getCelsius() {
-		return celsius;
+	public double getFahrenhiet() {
+		return fahrenhiet;
 	}
 
-	public void input(double celsius) {
-		this.celsius = celsius;
+	public void setFahrenhiet(double fahrenhiet) {
+		this.fahrenhiet = fahrenhiet;
+	}
+
+	public double getCelcius() {
+		return celcius;
+	}
+
+	public void input(double celcius) {
+		this.celcius = celcius;
 		
 	}
-	public boolean isBound(double celsius) {
+	public boolean isBound(double celcius) {
 		boolean isresult;
-		if(celsius  >= -1000 && celsius <= 1000) {
+		if(celcius  >= -1000 && celcius <= 1000) {
 			isresult = true;
 		}else {
 			isresult = false;
 		}
 		return isresult ;
 	}
-
+	
+	public void calculate() {
+		this.fahrenhiet = this.celcius*9/5+32;
+	
+	}
+	
+	
+	public String toString() {
+		double fahrenhiet = this.getFahrenhiet();
+		double celcius = this.getCelcius();
+		return Math.round(celcius)+" celcuis = "+Math.round(fahrenhiet)+" fahrenhiet";
+	}
+	
+	
+	
+	
+	
+	
+	
 }
