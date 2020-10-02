@@ -250,36 +250,123 @@ public class AppTest
 		double actual = object.getFahrenhiet();
 		assertEquals(expected, actual,2);
 	}
-	@Test
-	public void testResultMessageOutputInput0() {
-		
-		double input = 0 ;
-		String expected = "0 celcuis = 32 fahrenhiet";
-		object.input(input);
-		object.calculate();
-		String actual = object.toString();
-		assertEquals(expected, actual);
-	}
-	@Test
-	public void testResultMessageOutputInput1000() {
-		
-		double input = 1000 ;
-		String expected = "1000 celcuis = 1832 fahrenhiet";
-		object.input(input);
-		object.calculate();
-		String actual = object.toString();
-		assertEquals(expected, actual);
-	}
-	@Test
-	public void testResultMessageOutputInputMinus1000() {
-		
-		double input = -1000 ;
-		String expected = "-1000 celcuis = -1768 fahrenhiet";
-		object.input(input);
-		object.calculate();
-		String actual = object.toString();
-		assertEquals(expected, actual);
-	}
 	
+	@Test
+	public void testResultMessageOutput_Input0() {
+		double input = 0 ;
+		String expected = "0 celcius = 32.00 fahrenheit";
+		object.input(input);
+		object.calculate();
+		String actual = object.toString();
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultMessageOutput_Input1() {
+		double input = 1 ;
+		String expected = "1 celcius = 33.80 fahrenheit";
+		object.input(input);
+		object.calculate();
+		String actual = object.toString();
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultMessageOutput_Input499() {
+		double input = 499 ;
+		String expected = "499 celcius = 930.20 fahrenheit";
+		object.input(input);
+		object.calculate();
+		String actual = object.toString();
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultMessageOutput_Input500() {
+		double input = 500 ;
+		String expected = "500 celcius = 932.00 fahrenheit";
+		object.input(input);
+		object.calculate();
+		String actual = object.toString();
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultMessageOutput_Input501() {
+		double input = 501 ;
+		String expected = "501 celcius = 933.80 fahrenheit";
+		object.input(input);
+		object.calculate();
+		String actual = object.toString();
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultMessageOutput_Input999() {
+		double input = 999 ;
+		String expected = "999 celcius = 1830.20 fahrenheit";
+		object.input(input);
+		object.calculate();
+		String actual = object.toString();
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultMessageOutput_Input1000() {
+		double input = 1000 ;
+		String expected = "1000 celcius = 1832.00 fahrenheit";
+		object.input(input);
+		object.calculate();
+		String actual = object.toString();
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultMessageOutput_InputMinus1() {
+		double input = -1 ;
+		String expected = "-1 celcius = 30.20 fahrenheit";
+		object.input(input);
+		object.calculate();
+		String actual = object.toString();
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultMessageOutput_InputMinus499() {
+		double input = -499 ;
+		String expected = "-499 celcius = -866.20 fahrenheit";
+		object.input(input);
+		object.calculate();
+		String actual = object.toString();
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultMessageOutput_InputMinus500() {
+		double input = -500 ;
+		String expected = "-500 celcius = -868.00 fahrenheit";
+		object.input(input);
+		object.calculate();
+		String actual = object.toString();
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultMessageOutput_InputMinus501() {
+		double input = -501 ;
+		String expected = "-501 celcius = -869.80 fahrenheit";
+		object.input(input);
+		object.calculate();
+		String actual = object.toString();
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultMessageOutput_InputMinus999() {
+		double input = -999 ;
+		String expected = "-999 celcius = -1766.20 fahrenheit";
+		object.input(input);
+		object.calculate();
+		String actual = object.toString();
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void testResultMessageOutput_InputMinus1000() {
+		double input = -1000 ;
+		String expected = "-1000 celcius = -1768.00 fahrenheit";
+		object.input(input);
+		object.calculate();
+		String actual = object.toString();
+		assertEquals(expected, actual);
+	}
 	
 }
